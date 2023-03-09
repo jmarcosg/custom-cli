@@ -73,17 +73,17 @@ async function main() {
     return process.exit(0);
   }
 
+  const spinnerClonado = spinner();
+  spinnerClonado.start("Clonando template...");
+
+  await sleep(3000);
+  spinnerClonado.stop("Clonado!");
+
   const spinnerInit = spinner();
   spinnerInit.start("Inicializando proyecto...");
 
   await sleep(3000);
   spinnerInit.stop();
-
-  const spinnerClonado = spinner();
-  spinnerClonado.start("Inicializando proyecto...");
-
-  await sleep(3000);
-  spinnerClonado.stop("Installed via npm");
 
   outro("Listo! 🎉" + color.dim(` (${name} creado con ${techType} para desarrollo ${projectType})`));
 
