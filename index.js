@@ -17,6 +17,7 @@ const path = process.cwd().substring(0, process.cwd().lastIndexOf("\\"));
 const projects = {
   Laravel: "template-laravel-modernizacion",
   React: "template-reactjs-modernizacion",
+  ReactVite: "template-reactjs-modernizacion",
 };
 
 const urls = {
@@ -24,6 +25,8 @@ const urls = {
     "https://github.com/NQNModernizacion/template-laravel-modernizacion.git",
   React:
     "https://github.com/NQNModernizacion/template-reactjs-modernizacion.git",
+  ReactVite:
+    "-b vite https://github.com/NQNModernizacion/template-reactjs-modernizacion.git",
 };
 
 async function main() {
@@ -78,7 +81,8 @@ async function main() {
       techType = await select({
         message: "Seleccione la tecnología.",
         options: [
-          { value: "React", label: "React" },
+          { value: "React", label: "React w/ CRA" },
+          { value: "ReactVite", label: "React w/ Vite" },
           // { value: "Vue", label: "Vue" },
           // {
           //   value: "Angular",
