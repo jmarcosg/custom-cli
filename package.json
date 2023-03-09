@@ -9,6 +9,7 @@
     "@clack/core": "^0.3.2",
     "@clack/prompts": "^0.6.3",
     "picocolors": "^1.0.0",
+    "shelljs": "^0.8.5",
     "sisteransi": "^1.0.5"
   }
 }
